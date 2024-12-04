@@ -16,15 +16,8 @@ A Python package that provides various perceptual similarity metrics for compari
 
 ## Installation
 
-1. Clone the repository:
 ```bash
-git clone https://github.com/minha12/criteria.git
-cd criteria
-```
-
-2. Install the package:
-```bash
-pip install -e .
+pip install criteria
 ```
 
 ## Usage
