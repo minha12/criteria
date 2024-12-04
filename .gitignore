@@ -1,0 +1,32 @@
+# Python
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.env/
+.venv/
+ENV/
+dist/
+build/
+*.egg-info/
+
+# IDEs and editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Hydra outputs
+outputs/
+multirun/
+
+# Project specific
+*.pt
+*.pth
+*.ckpt
+wandb/
+logs/
