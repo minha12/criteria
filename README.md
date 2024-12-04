@@ -81,6 +81,6 @@ If you use this package in your research, please cite:
   title = {Criteria: Image Similarity Metrics},
   year = {2023},
   publisher = {GitHub},
-  url = {https://github.com/username/criteria}
+  url = {https://github.com/minha12/criteria}
 }
 ```
