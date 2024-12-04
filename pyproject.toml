@@ -9,6 +9,7 @@ description = "Deep learning loss functions and models for image similarity"
 authors = [
     {name = "Minh-Ha Le", email = "minhha.x89@gmail.com"},
 ]
+readme = "README.md"
 requires-python = ">=3.6"
 dependencies = [
     "torch",
@@ -25,3 +26,10 @@ dependencies = [
     "grpcio",
     "tensorboard-data-server"
 ]
+
+[project.urls]
+"Homepage" = "https://github.com/minha12/criteria"
+
+[tool.setuptools.packages.find]
+where = ["."]
+exclude = ["outputs*", "__pycache__*"]
