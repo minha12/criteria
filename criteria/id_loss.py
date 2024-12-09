@@ -53,7 +53,7 @@ class IdLost(nn.Module):
         if self.model_name == "ir152":
             fr_model = ir152.IR_152((112, 112))
             if not os.path.exists(f"{weights_dir}/ir152.pth"):
-                download_fr_model_weights("ir152")
+                download_fr_model_weights("ir152", self.cfg)
             fr_model.load_state_dict(
                 torch.load(f"{weights_dir}/ir152.pth", weights_only=True)
             )
@@ -61,7 +61,7 @@ class IdLost(nn.Module):
         elif self.model_name == "irse50":
             fr_model = irse.Backbone(50, 0.6, "ir_se")
             if not os.path.exists(f"{weights_dir}/irse50.pth"):
-                download_fr_model_weights("irse50")
+                download_fr_model_weights("irse50", self.cfg)
             fr_model.load_state_dict(
                 torch.load(f"{weights_dir}/irse50.pth", weights_only=True)
             )
@@ -69,7 +69,7 @@ class IdLost(nn.Module):
         elif self.model_name == "mobile_face":
             fr_model = irse.MobileFaceNet(512)
             if not os.path.exists(f"{weights_dir}/mobile_face.pth"):
-                download_fr_model_weights("mobile_face")
+                download_fr_model_weights("mobile_face", self.cfg)
             fr_model.load_state_dict(
                 torch.load(f"{weights_dir}/mobile_face.pth", weights_only=True)
             )
@@ -77,7 +77,7 @@ class IdLost(nn.Module):
         elif self.model_name == "facenet":
             fr_model = facenet.InceptionResnetV1(num_classes=8631, device=self.device)
             if not os.path.exists(f"{weights_dir}/facenet.pth"):
-                download_fr_model_weights("facenet")
+                download_fr_model_weights("facenet", self.cfg)
             fr_model.load_state_dict(
                 torch.load(f"{weights_dir}/facenet.pth", weights_only=True)
             )
@@ -85,7 +85,7 @@ class IdLost(nn.Module):
         elif self.model_name == "cur_face":
             fr_model = IR_101(input_size=112)
             if not os.path.exists(f"{weights_dir}/cur_face.pth"):
-                download_fr_model_weights("cur_face")
+                download_fr_model_weights("cur_face", self.cfg)
             fr_model.load_state_dict(
                 torch.load(f"{weights_dir}/cur_face.pth", weights_only=True)
             )
