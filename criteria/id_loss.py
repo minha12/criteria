@@ -55,7 +55,7 @@ class IdLost(nn.Module):
             if not os.path.exists(f"{weights_dir}/ir152.pth"):
                 download_fr_model_weights("ir152", self.cfg)
             fr_model.load_state_dict(
-                torch.load(f"{weights_dir}/ir152.pth", weights_only=True)
+                torch.load(f"{weights_dir}/ir152.pth")
             )
             # print("Loaded IR152 model")
         elif self.model_name == "irse50":
@@ -63,7 +63,7 @@ class IdLost(nn.Module):
             if not os.path.exists(f"{weights_dir}/irse50.pth"):
                 download_fr_model_weights("irse50", self.cfg)
             fr_model.load_state_dict(
-                torch.load(f"{weights_dir}/irse50.pth", weights_only=True)
+                torch.load(f"{weights_dir}/irse50.pth")
             )
             # print("Loaded IRSE50 model")
         elif self.model_name == "mobile_face":
@@ -71,7 +71,7 @@ class IdLost(nn.Module):
             if not os.path.exists(f"{weights_dir}/mobile_face.pth"):
                 download_fr_model_weights("mobile_face", self.cfg)
             fr_model.load_state_dict(
-                torch.load(f"{weights_dir}/mobile_face.pth", weights_only=True)
+                torch.load(f"{weights_dir}/mobile_face.pth")
             )
             # print("Loaded MobileFace model")
         elif self.model_name == "facenet":
@@ -79,7 +79,7 @@ class IdLost(nn.Module):
             if not os.path.exists(f"{weights_dir}/facenet.pth"):
                 download_fr_model_weights("facenet", self.cfg)
             fr_model.load_state_dict(
-                torch.load(f"{weights_dir}/facenet.pth", weights_only=True)
+                torch.load(f"{weights_dir}/facenet.pth")
             )
             # print("Loaded Facenet model")
         elif self.model_name == "cur_face":
@@ -87,7 +87,7 @@ class IdLost(nn.Module):
             if not os.path.exists(f"{weights_dir}/cur_face.pth"):
                 download_fr_model_weights("cur_face", self.cfg)
             fr_model.load_state_dict(
-                torch.load(f"{weights_dir}/cur_face.pth", weights_only=True)
+                torch.load(f"{weights_dir}/cur_face.pth")
             )
             # print("Loaded CurricularFace model")
 
