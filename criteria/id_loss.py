@@ -13,6 +13,7 @@ import criteria.models.irse as irse
 import criteria.models.facenet as facenet
 import criteria.models.ir152 as ir152
 from criteria.models.model_irse import IR_101
+from criteria.utils.paths import get_package_root
 
 def distance(embeddings1, embeddings2, distance_metric=1):
     if embeddings1.dim() == 1:
@@ -39,7 +40,7 @@ class IdLost(nn.Module):
     def __init__(self, model_name, cfg=None):
         super(IdLost, self).__init__()
         self.model_name = model_name
-        self.cfg = cfg if cfg is not None else OmegaConf.load("configs/config.yaml")
+        self.cfg = cfg if cfg is not None else OmegaConf.load(f"{get_package_root()}/configs/config.yaml")
         self.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
         self.fr_model = self.load_fr_model()
         self.pool = torch.nn.AdaptiveAvgPool2d((self.cfg.id_loss.pool_size, self.cfg.id_loss.pool_size))
