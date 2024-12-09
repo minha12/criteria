@@ -17,7 +17,7 @@ class CLIPLoss(torch.nn.Module):
         similarity = 1 - self.model(image, text)[0] / 100
         return similarity
     
-    def compute_distance(self, x, y):
+    def clip_distance(self, x, y):
         # Resize images if needed
         if x.shape[2] != 224:
             x = self.resize_pool(x)
