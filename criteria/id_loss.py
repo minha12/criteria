@@ -9,7 +9,7 @@ import torch.nn.functional as F
 
 from utils.download import download_fr_model_weights
 
-import models.model_irse as irse
+import models.irse as irse
 import models.facenet as facenet
 import models.ir152 as ir152
 from models.model_irse import IR_101
