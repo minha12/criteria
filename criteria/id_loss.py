@@ -9,10 +9,10 @@ import torch.nn.functional as F
 
 from utils.download import download_fr_model_weights
 
-import models.irse as irse
-import models.facenet as facenet
-import models.ir152 as ir152
-from models.model_irse import IR_101
+import criteria.models.irse as irse
+import criteria.models.facenet as facenet
+import criteria.models.ir152 as ir152
+from criteria.models.model_irse import IR_101
 
 def distance(embeddings1, embeddings2, distance_metric=1):
     if embeddings1.dim() == 1:

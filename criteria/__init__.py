@@ -3,8 +3,8 @@ import hydra
 from omegaconf import DictConfig, OmegaConf
 import torch
 
-from models import ir152, facenet, model_irse
-from models.model_irse import IR_101
+from criteria.models import ir152, facenet, model_irse
+from criteria.models.model_irse import IR_101
 from utils.download import download_fr_model_weights
 from utils.paths import register_resolvers 
 
