@@ -7,7 +7,7 @@ from omegaconf import DictConfig, OmegaConf
 
 import torch.nn.functional as F
 
-from utils.download import download_fr_model_weights
+from criteria.utils.download import download_fr_model_weights
 
 import criteria.models.irse as irse
 import criteria.models.facenet as facenet
